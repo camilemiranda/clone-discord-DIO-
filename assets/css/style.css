@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cabecalho {
+ background: url('/assets/imgs/image.png');
+ background-position: center;
+ background-repeat: no-repeat;
+ min-height: 95vh;
+ display: flex;
+ align-items: center;
+ position: relative;
+ overflow: hidden;
+}
+
+.cabecalho .layout {
+ position: relative;
+ z-index: 2;
+ text-align: center;
+}
+
+.cabecalho h1 {
+ font-family: 'Luckiest Guy';
+ letter-spacing: 1rem;
+ font-size: 3.5rem;
+ font-weight: 400;
+ margin-bottom: 1.5rem;
+ letter-spacing: -0.02em;
+}
+
+.cabecalho p {
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 300;
+ font-size: 1.25rem;
+ margin-bottom: 2rem;
+ max-width: 600px;
+ margin-left: auto;
+ margin-right: auto;
+ opacity: 0.9;
+}
+
+.buttons {
+ display: flex;
+ gap: 1rem;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.botao-baixar {
+ padding: 16px 32px;
+ border: none;
+ border-radius: 28px;
+ font-size: 1rem;
+ font-weight: 500;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ display: inline-block;
+ background: white;
+ color: black;
+}
+
+.botao-abrir {
+ padding: 16px 32px;
+ border: none;
+ border-radius: 28px;
+ font-size: 1rem;
+ font-weight: 500;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ display: inline-block;
+ background: #23272a;
+ color: white;
+}
+
+.conteudo {
+ background: white;
+ color: #23272a;
+ padding: 80px 0;
+}
+
+.control-space, .flexible-chats {
+ padding: 80px 0;
+}
+
+.conjunto {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 80px;
+ align-items: center;
+}
+
+.easy-to-meet, .reliable-tech {
+ background-color: #F6F6F6;
+}
+
+.easy-to-meet .conjunto {
+ grid-template-columns: 1fr 1fr;
+}
+
+.easy-to-meet .sessao-texto {
+ order: 1;
+}
+
+.easy-to-meet .sessao-imagem {
+ order: 2;
+}
+
+.sessao-texto h2 {
+ font-size: 2.5rem;
+ font-weight: 800;
+ margin-bottom: 1.5rem;
+ line-height: 1.2;
+}
+
+.sessao-texto p {
+ font-size: 1.25rem;
+ color: #23272A;
+ line-height: 1.6;
+}
+
+.reliable-tech {
+ padding: 80px 0;
+ text-align: center;
+}
+
+.reliable-tech .conjunto {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ gap: 2rem;
+}
+
+.reliable-tech h2 {
+ font-size:3rem;
+ font-family: 'Luckiest Guy';
+ font-weight: 800;
+ margin-bottom: 1rem;
+ color: #23272a;
+}
+
+.reliable-tech p {
+ font-size: 1.25rem;
+ color: #23272A;
+ max-width: 800px;
+ margin: 0 auto 3rem;
+}
+
+.reliable-tech img {
+ width: 600px;
+ height: auto;
+ max-width: 100%;
+}
+
+footer {
+ background: #23272a;
+ padding: 40px 0;
+ color: white;
+}
+
+.rodape {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ justify-content: center;
+}
+
+.logo {
+ width: 32px;
+ height: auto;
+}
+
+.rodape span {
+ font-size: 1.5rem;
+ font-weight: 700;
+}
+
+@media (max-width: 428px) {
+  .cabecalho {
+    background-size: cover; /* Garante que a imagem ocupe o espaço sem distorcer */
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .cabecalho h1 {
+    font-size: 2rem;
+    letter-spacing: normal;
+    padding: 0 10px;
+  }
+
+  .cabecalho p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .botao-baixar,
+  .botao-abrir {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+
+  .conjunto {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .sessao-imagem img {
+    width: 100%;
+    height: auto;
+    max-width: 360px; /* Limita a largura máxima para telas menores */
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sessao-texto {
+    text-align: left;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+
+  .sessao-texto h2,
+  .sessao-texto p {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .sessao-imagem {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .sessao-texto,
+  .sessao-imagem {
+    width: 100%;
+  }
+
+  .sessao-texto h2 {
+    font-size: 1.75rem;
+    padding: 0 10px;
+  }
+
+  .easy-to-meet .sessao-imagem {
+    order: -1;
+  }
+
+  .sessao-texto p,
+  .reliable-tech p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .reliable-tech img {
+    width: 100%;
+    height: auto;
+  }
+
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .rodape span {
+    font-size: 1.2rem;
+  }
+}
